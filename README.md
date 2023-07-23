@@ -9,3 +9,6 @@ This tool can be used to backup your files to any other location on your system,
 ## To Use:
     - Open a Terminal/Powershell Session
     - Run the backuptool.py script
+
+
+## THIS TOOL IS UNFINISHED & IS RIFE WITH BUGS. BE PATIENT & DON'T JUDGE :) 
