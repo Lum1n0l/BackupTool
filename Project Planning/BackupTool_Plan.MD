@@ -11,4 +11,4 @@ To create a small, lightweight Python Tool that can be executed and ran as a bac
                     - Able to access & copy to Network Locations
                     - Actual functioning error handling
                     - As interactive as possible
-                    - 
+                    - Possibility of expanding to a GUI. 
