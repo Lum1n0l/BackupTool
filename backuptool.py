@@ -1,4 +1,5 @@
 import os
+import sys
 import shutil
 import schedule
 import time
@@ -48,7 +49,7 @@ elif time_schedule == "TEST":
     schedule.every(1).minute.do(backup, src_dirs, dest_dir)
 else:
     print("Invalid Selection")
-    exit()
+    sys.exit()
 
 backup_now = input("Backup Now? Y/N \n")
 if backup_now == "Y":
@@ -57,5 +58,4 @@ if backup_now == "Y":
 while True:
     schedule.run_pending()
     time.sleep(1)
-
 
