@@ -1,3 +1,10 @@
 # Script to prompt user for paths to files to be backed up - then build out a .txt list of directories to be fed into backuptool. 
 
 print("Lets Choose What To Backup....")
+
+with open ("src_dirs.txt", "w") as file:
+    while True:
+        src_dir = input("Please Enter The Absolute Path To The Folder You Wish To Backup: \n")
+        file.write(src_dir + "\n")
+        if input("Add Another Directory? Y/N \n") == "N":
+            break
