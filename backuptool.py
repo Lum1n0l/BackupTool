@@ -30,7 +30,7 @@ def backup(source_dir, dest_dir):
                     dest_file = os.path.join(dest_dir, filename)
                     if os.path.exists(dest_file):
                         if os.path.getmtime(src_file) == os.path.getmtime(dest_file):
-                            print(f"Skipping {filename} - File Exists & Unchanged Since Last Backup")
+                            print(f"Skipping {filename} - Directory Exists & Unchanged Since Last Backup")
                             continue
                     shutil.copytree(src_file, dest_file)
                     print(f"Backup Of {filename} Successful At: {time.ctime()}")
