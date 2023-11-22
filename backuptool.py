@@ -4,11 +4,23 @@ import shutil
 import schedule
 import time
 import datetime
+import build_srcfile
+
 
 with open ("banner.txt", "r", encoding='utf-8') as file:
     for line in file:
         print(line.strip())
-print("\n")
+print("\n\n")
+print("Main Menu: \n\n1) Configure Source Directories\n2) Run Backup Script\n3) Exit\n\n")
+menu_selection = float(input("Please Select An Option: \n"))
+
+if menu_selection == 1:
+    build_srcfile.build_srcfile()
+elif menu_selection == 2:
+    pass
+elif menu_selection == 3:
+    sys.exit()
+
 
 def backup(source_dir, dest_dir):
     try:
@@ -18,8 +30,8 @@ def backup(source_dir, dest_dir):
         for source_dir in src_dirs:
             for filename in os.listdir(source_dir):
                 src_file = os.path.join(source_dir, filename)
+                dest_file = os.path.join(dest_dir, filename)
                 if os.path.isfile(src_file):
-                    dest_file = os.path.join(dest_dir, filename)
                     if os.path.exists(dest_file):
                         if os.path.getmtime(src_file) == os.path.getmtime(dest_file):
                             print(f"Skipping {filename} - File Exists & Unchanged Since Last Backup")
@@ -27,7 +39,6 @@ def backup(source_dir, dest_dir):
                     shutil.copy2(src_file, dest_file)
                     print(f"Backup Of {filename} Successful At: {time.ctime()}")
                 else:
-                    dest_file = os.path.join(dest_dir, filename)
                     if os.path.exists(dest_file):
                         if os.path.getmtime(src_file) == os.path.getmtime(dest_file):
                             print(f"Skipping {filename} - Directory Exists & Unchanged Since Last Backup")
