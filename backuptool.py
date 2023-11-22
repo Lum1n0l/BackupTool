@@ -5,7 +5,10 @@ import schedule
 import time
 import datetime
 
-print("Welcome To The Python Backup Tool!")
+with open ("banner.txt", "r", encoding='utf-8') as file:
+    for line in file:
+        print(line.strip())
+print("\n")
 
 def backup(source_dir, dest_dir):
     try:
