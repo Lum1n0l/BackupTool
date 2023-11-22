@@ -9,10 +9,7 @@ This tool can be used to backup your files to any other location on your system,
 ## To Use:
     - Open a Terminal/Powershell Session
     - Ensure your have Python installed on your system, preferably >= 3.12.0.
-    - Install dependencies via pip using the 'requirements.txt' file included.
-    `
-    pip install -r requirements.txt
-    `  
+    - Install dependencies via pip - pip install -r requirements.txt
     - Run the build_srcfile.py script to select the directories you wish to backup. 
     - Run the backuptool.py script to select your backup destination & backup frequency. 
     - Leave the script running
