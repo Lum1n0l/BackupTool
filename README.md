@@ -1,10 +1,13 @@
-# BackupTool
-A Basic Python Tool For Backing Up Files To Another Location
+__________                __              ___________           .__   
+\______   \_____    ____ |  | ____ _______\__    ___/___   ____ |  |  
+ |    |  _/\__  \ _/ ___\|  |/ /  |  \____ \|    | /  _ \ /  _ \|  |  
+ |    |   \ / __ \\  \___|    <|  |  /  |_> >    |(  <_> |  <_> )  |__
+ |______  /(____  /\___  >__|_ \____/|   __/|____| \____/ \____/|____/
+        \/      \/     \/     \/     |__|   V1.0B - dajtp
 
-This tool can be used to backup your files to any other location on your system, including network locations. 
 
-
-
+A Basic Python Tool For Backing Up Files To Another Location!
+This tool can be used to backup your files to any other location on your system. 
 
 ## To Use:
     - Open a Terminal/Powershell Session
