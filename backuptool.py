@@ -26,7 +26,14 @@ def backup(source_dir, dest_dir):
                             continue
                     shutil.copy2(src_file, dest_file)
                     print(f"Backup Of {filename} Successful At: {time.ctime()}")
-    
+                else:
+                    if os.path.exists(dest_file):
+                        if os.path.getmtime(src_file) == os.path.getmtime(dest_file):
+                            print(f"Skipping {filename} - File Exists & Unchanged Since Last Backup")
+                            continue
+                    shutil.copytree(src_file, dest_file)
+                    print(f"Backup Of {filename} Successful At: {time.ctime()}")
+
     except Exception as e:
         print(f"Error during backup: {e}")
         pass
