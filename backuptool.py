@@ -36,7 +36,6 @@ def backup(source_dir, dest_dir):
                         if os.path.getmtime(src_file) == os.path.getmtime(dest_file):
                             print(f"Skipping {filename} - File Exists & Unchanged Since Last Backup")
                             continue
-                    # deepcode ignore PT: <please specify a reason of ignoring this>
                     shutil.copy2(src_file, dest_file)
                     print(f"Backup Of {filename} Successful At: {time.ctime()}")
                 else:
